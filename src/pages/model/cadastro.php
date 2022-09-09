@@ -16,6 +16,7 @@
         $result_usuario -> bindParam(':email', $data['email'], PDO::PARAM_STR);
         $result_usuario -> execute();
 
+        // Analisa os dados enviados 
         if(($result_usuario) && ($result_usuario -> rowCount() == 0) && !empty($data['email'])) {
             if (empty($data['nome']) || empty($data['senha']) || empty($data['ddd']) || empty($data['telefone'])) {
 
@@ -29,8 +30,9 @@
             }
             else {
 
-                $senha = password_hash($data['senha'], PASSWORD_DEFAULT); // Criptografia de senha
+                $senha = password_hash($data['senha'], PASSWORD_DEFAULT); // Criptografa a senha
 
+                // Insere o usuário no banco 
                 $query_cadastro = "INSERT INTO USUARIO(NOME, EMAIL, SENHA)
                                     VALUES(:nome, :email, :senha)";
 
@@ -42,6 +44,7 @@
 
                 if($result_cadastro) {
 
+                    // Busca o ID do novo usuário salvo 
                     $query_novo_usuario = "SELECT IDUSUARIO
                                             FROM USUARIO
                                             WHERE EMAIL = :email 
@@ -54,6 +57,7 @@
                     if(($result_novo_usuario) && ($result_novo_usuario -> rowCount() == 1)) {
                         $row_novo_usuario = $result_novo_usuario -> fetch(PDO::FETCH_ASSOC);
 
+                        // Insere no banco o telefone vinculado ao usuário  
                         $query_telefone = "INSERT INTO TELEFONE(DDD, NUMERO, ID_USUARIO) 
                                             VALUES(:ddd, :numero, :id_usuario)";
                        

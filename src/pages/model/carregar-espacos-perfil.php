@@ -37,7 +37,6 @@
                 
                 <p class="post-footer"> Clique para ver as datas disponiveis! </p>
             </a>
-
 <?php
     }
        

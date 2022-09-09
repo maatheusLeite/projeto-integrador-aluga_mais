@@ -24,7 +24,6 @@
             <div class="image-panel">
                 <img src="../../posts/<?php echo $imagem['URL'] ?>" class="post-image">
             </div>
-
 <?php
         }
     }

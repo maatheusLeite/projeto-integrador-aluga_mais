@@ -15,9 +15,12 @@
         $result_usuario -> bindParam(':email', $data['email'], PDO::PARAM_STR);
         $result_usuario -> execute();
         
+        // Verifica se o usuário existe  
         if(($result_usuario) && ($result_usuario -> rowCount() != 0)) {
             $row_usuario = $result_usuario -> fetch(PDO::FETCH_ASSOC);
+            
 
+            // Verifica a senha 
             if(password_verify($data['senha'], $row_usuario['SENHA'])) {
                 $_SESSION['id_usuario'] = $row_usuario['IDUSUARIO'];
                 $_SESSION['nome_usuario'] = $row_usuario['NOME'];

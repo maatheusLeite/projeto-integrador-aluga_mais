@@ -11,6 +11,8 @@
     $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);  
 
     if(!empty($data['sendNovaLocalidade'])) {
+
+        // Verifica se todos os dados foram enviados
         if (empty($data['nome']) || empty($data['rua']) || empty($data['bairro']) || empty($data['tipo'])
             || empty($data['numero']) || empty($data['valor']) || empty($data['pagamento'])) {
 
@@ -26,6 +28,7 @@
         }
         else {
 
+            // Insere a nova localidade no banco 
             $query_cadastro_localidade = "INSERT INTO LOCALIDADE(NOME, TIPO, PAGAMENTO, VALOR, ID_USUARIO)
                                 VALUES(:nome, :tipo, :pagamento, :valor, :id_usuario)";
 
@@ -52,7 +55,7 @@
                 if(($result_localidade) && ($result_localidade -> rowCount() != 0)) {
                     $row_localidade = $result_localidade -> fetch(PDO::FETCH_ASSOC);
 
-                    // verifica se foi enviado um arquivo
+                    // Verifica se foi enviado um arquivo
                     if (isset($_FILES['imagem']['name']) && $_FILES['imagem']['error'] == 0) {
                      
                         $imagem_tmp = $_FILES['imagem']['tmp_name'];
@@ -66,13 +69,14 @@
                      
                         // Somente imagens, .jpg;.jpeg;.png - Extensões permitidas separadas por ';'
                         if (strstr('.jpg;.jpeg;.png', $extensao)) {
+
                             // Cria um nome único para esta imagem
                             $novo_nome = uniqid(time()) . '.' . $extensao;
                      
                             // Concatena a pasta com o nome
                             $destino = '../../posts/' . $novo_nome;
                      
-                            // tenta mover o arquivo para o destino
+                            // Tenta mover a imagem para o destino
                             if (@move_uploaded_file($imagem_tmp, $destino)) {
                                 $_SESSION['msg'] = 'Arquivo salvo com sucesso';
                             }
@@ -111,7 +115,8 @@
                         $_SESSION['input_estado'] = $data['estado'];
                         $_SESSION['input_valor'] = $data['valor'];
                     } 
-
+                    
+                    // Insere a imagem vinculada à localidade no banco 
                     $query_imagem = "INSERT INTO IMAGEM(URL, ID_LOCALIDADE) 
                                         VALUES(:url, :id_localidade)";
                     
@@ -122,6 +127,7 @@
                     $result_imagem -> bindParam(':id_localidade', $row_localidade['IDLOCALIDADE'], PDO::PARAM_INT);
                     $result_imagem -> execute();  
 
+                    // Insere o endereço vinculado à localidade no banco 
                     if($result_imagem) {
                         $query_endereco = "INSERT INTO ENDERECO(RUA, BAIRRO, CIDADE, ESTADO, NUMERO, ID_LOCALIDADE) 
                                             VALUES(:rua, :bairro, :cidade, :estado, :numero, :id_localidade)";

@@ -22,6 +22,7 @@
         if(($result_localidade) && ($result_localidade -> rowCount() != 0)) {
             $row_localidade = $result_localidade -> fetch(PDO::FETCH_ASSOC);
 
+            // Verifica se a localidade a ser excluida pertence ao usuário que realizou a chamada 
             if($row_localidade['ID_USUARIO'] == $data['id_usuario']) {
                 
                 $query_excluir_endereco = "DELETE FROM ENDERECO
@@ -31,8 +32,7 @@
                 $result_excluir_endereco -> bindParam(':id_localidade', $row_localidade['IDLOCALIDADE'], PDO::PARAM_INT);
                 $result_excluir_endereco -> execute(); 
                 
-                // Apaga arquivos de imagem
-
+                // Exclui os arquivos de imagens salvos 
                 $query_imagem = "SELECT URL
                                     FROM IMAGEM     
                                     WHERE ID_LOCALIDADE = :id_localidade";
@@ -48,8 +48,7 @@
                 }
 
 
-                // Apaga referencia da imagem no banco de dados
-
+                // Exclui a referencia da imagem no banco de dados 
                 $query_excluir_imagem = "DELETE FROM IMAGEM
                                             WHERE ID_LOCALIDADE = :id_localidade";
 

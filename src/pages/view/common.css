@@ -330,7 +330,7 @@ a:hover {
 .post-panel {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 420px;
     width: 320px;
     background-color: #F8FAFF;
     border: solid 2px #EDE8E8;

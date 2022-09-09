@@ -2,11 +2,6 @@
 
     session_start();
     include_once 'connection.php';  
-    
-    if(!isset($_SESSION['login'])) { 
-        header("Location: ../controller/entrar.php");
-        $_SESSION['msg'] = '<p style="color: #F00"> Por favor, efetue o login para acessar esta pagina! </p>';
-    } 
 
     $query_localidade = "SELECT L.IDLOCALIDADE, L.NOME, L.VALOR, L.PAGAMENTO, I.URL, 
                                         E.RUA, E.BAIRRO, E.CIDADE, E.ESTADO, E.NUMERO                                       
@@ -34,9 +29,8 @@
             
             <h5 class="post-price"> Valor <?php echo $row_localidade['PAGAMENTO'] . ': <p class="post-value"> R$ ' . $row_localidade['VALOR'] ?> </p></h5>
             
-            <p class="post-footer"> Clique para ver as datas disponiveis! </p>
+            <p class="post-footer"> Clique para entrar em contato com o locador! </p>
         </a>
-
 <?php  
     }
 

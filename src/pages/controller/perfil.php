@@ -31,7 +31,6 @@
         <header>
             <div class="container">
                 <div class="row">
-
                     <div class="col-sm-12 nav">
                         
                         <a href="index.php"> <img class="logo" src="../../assets/images/logo.png" alt="ALUGA+ Home"> </a>
@@ -39,7 +38,6 @@
                         <a href="../model/logout.php"><button class="button-sair-sm" id="btSair"> sair </button></a>
                             
                     </div>
-
                 </div>
             </div>
         </header>
@@ -66,7 +64,6 @@
                                 }
                             ?>
                         </div>
-                
                     </div>
                 </div>
 
@@ -80,7 +77,6 @@
                         <a href="adicionar-localidade.php"><button class="button-adicionar" id="btAdicionar"> + </button></a>
 
                     </div>
-
                 </div>
             </div>
         </div>

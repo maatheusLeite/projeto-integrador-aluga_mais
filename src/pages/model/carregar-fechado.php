@@ -3,11 +3,6 @@
     session_start();
     require_once 'connection.php'; 
     
-    if(!isset($_SESSION['login'])) { 
-        header("Location: ../controller/entrar.php");
-        $_SESSION['msg'] = '<p style="color: #F00"> Por favor, efetue o login para acessar esta pagina! </p>';
-    } 
-
     $query_localidade = "SELECT IDLOCALIDADE                                     
                             FROM LOCALIDADE
                             WHERE TIPO = 'Fechado'";

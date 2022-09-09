@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="col-sm-6 nav">
-                        <nav class="menu">
+                        <nav class="menu atalhos">
                             <a href="#" class="menu-item"> Espaços ao ar Livre </a>
                             <a href="#area2" class="menu-item"> Espaços fechados </a>
                             <a href="#area3" class="menu-item"> Buffets </a>

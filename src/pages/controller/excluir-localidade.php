@@ -75,7 +75,6 @@
                         <button type="submit" class="button-excluir" name="sendExcluir" value="excluir" id="btExcluir"> EXCLUIR </button>
                     </form>
                    
-                    
                 </div>
             </div>
         </div>

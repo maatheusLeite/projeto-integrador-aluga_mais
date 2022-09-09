@@ -32,13 +32,16 @@
             <div class="container zin">
                 <div class="row">
                     <div class="col-sm-12 nav">
-                        
+
                         <a href="index.php"> <img class="logo" src="../../assets/images/logo.png" alt="ALUGA+ Home"> </a>
 
-                        <a href="../model/logout.php"><button class="button-sair-sm" id="btSair"> sair </button></a>
-                            
-                    </div>
+                        <div>
+                            <a href="perfil.php" class="button-perfil-sm" id="btPerfil"> <?php echo $_SESSION['nome_usuario'] ?> </a>
 
+                            <a href="../model/logout.php"><button class="button-sair-sm" id="btSair"> sair </button></a>
+                        </div>
+                   
+                    </div>
                 </div>
             </div>
         </header>    

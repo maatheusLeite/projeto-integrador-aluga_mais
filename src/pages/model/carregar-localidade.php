@@ -40,6 +40,5 @@
         <p class="post-text"> <b>Telefone:</b> <?php echo $row_localidade['DDD'] . ' ' . $row_localidade['TELEFONE'] ?> </p>
         
         <h5 class="post-price"> Valor <?php echo $row_localidade['PAGAMENTO'] ?>: <p class="post-value"> R$ <?php echo $row_localidade['VALOR'] ?> </p></h5>
-        <a href="mailto:<?php echo $row_localidade['EMAIL'] ?>"> <button class="button-editar" id="btContato"> Entrar em contato </button> </a>
 <?php 
     }

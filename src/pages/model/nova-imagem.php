@@ -18,21 +18,21 @@
             $imagem_tmp = $_FILES['imagem']['tmp_name'];
             $nome = $_FILES['imagem']['name'];
             
-            // Pega a extensão
+            // Identifica a extensão
             $extensao = pathinfo($nome, PATHINFO_EXTENSION);
             
-            // Converte a extensão para minúsculo
+            // Coverte a extensão para minúsculon
             $extensao = strtolower($extensao);
             
             // Somente imagens, .jpg;.jpeg;.png - Extensões permitidas separadas por ';'
             if (strstr('.jpg;.jpeg;.png', $extensao)) {
+
                 // Cria um nome único para esta imagem
                 $novo_nome = uniqid(time()) . '.' . $extensao;
             
-                // Concatena a pasta com o nome
                 $destino = '../../posts/' . $novo_nome;
             
-                // tenta mover o arquivo para o destino
+                // Tenta mover imagem para o destino
                 if (@move_uploaded_file($imagem_tmp, $destino)) {
                     $_SESSION['msg'] = '<p style="color: #0F0;"> Imagem salva com sucesso! </p>';
                 }
@@ -72,6 +72,7 @@
             $_SESSION['input_valor'] = $data['valor'];
         } 
 
+        // Salva caminho da imagem no banco
         $query_imagem = "INSERT INTO IMAGEM(URL, ID_LOCALIDADE) 
                             VALUES(:url, :id_localidade)";
         
