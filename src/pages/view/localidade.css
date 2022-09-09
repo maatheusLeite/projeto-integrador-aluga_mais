@@ -1,0 +1,76 @@
+body {
+    overflow: hidden;
+}
+
+.bg {
+    background-image: url('../../assets/images/bgentrar.jpg');
+}
+
+.nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.general-panel {
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 100px;
+}
+
+.post-text {
+    margin-top: 20px;
+}
+
+.post-price {
+    margin: 30px;
+    font-size: 1.3em;
+}
+
+.post-text {
+    text-align: start;
+    width: 400px;
+}
+
+.title {
+    font-size: 1.7em;
+}
+
+.button-editar {
+    width: 300px;
+}
+
+.images {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.image-panel {
+    margin: 30px;
+}
+
+@media (max-width: 1000px) { 
+    .bg {
+        background-image: none;
+    }
+
+    .images {
+        flex-direction: column;
+        width: 350px;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .post-text {
+        width: 300px;
+    }
+
+    .general-panel {
+        margin-top: 20px;
+        background-color: #FFF;
+    }
+}

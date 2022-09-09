@@ -1,0 +1,45 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-item {
+    margin-left: 40px;
+}
+
+.area1 {
+    margin-top: 50px;
+    background-image: linear-gradient(#03191e00, #03191EAD), url('../../assets/images/bg01.jpg');
+    background-position-y: 600px;
+    background-position-x: center;
+    background-size: 1920px 1080px;
+    height:600px;
+    box-shadow: inset 0 1em 1em #03191E, 0 1em 1em #000;
+}
+
+.area2 {
+    padding-top: 20px;
+    background-image: url('../../assets/images/bg02.jpg');
+    background-position-y: 600px;
+    background-position-x: center;
+    background-size:  1920px 1080px;
+    height:500px;
+    box-shadow: inset 0 1em 1em #000, 0 1em 1em #000;
+}
+
+.area3 {
+    padding-top: 20px;
+    background-image: url('../../assets/images/bg03.jpg');
+    background-position-y: 600px;
+    background-position-x: center;
+    background-size:  1920px 1080px;
+    height:500px;
+    box-shadow: inset 0 1em 1em #000, 0 1em 1em #000;
+}

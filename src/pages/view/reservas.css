@@ -1,0 +1,18 @@
+.date-panel {
+    width: 400px;
+    height: 300px;
+    border: solid 4px #474747;
+    background-color: #F8FAFF;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.bg {
+    background-image: url('../../assets/images/bgentrar.jpg');
+}
+
+.nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

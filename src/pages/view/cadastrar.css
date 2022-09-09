@@ -1,0 +1,57 @@
+header {
+    position: static;
+    background-color: #00000000;
+}
+
+.nav {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-item {
+    margin-left: 40px;
+}
+
+.input {
+    margin: 10px;
+}
+
+.input-panel {
+    margin-top: 15px;
+}
+
+.area0 {
+    background-image: url('../../assets/images/bgentrar.jpg');
+    height: 100vh;
+    width: 100vw;
+}
+
+.area1 {
+    margin-top: 50px;
+}
+
+@media (max-width: 1000px) { 
+
+    body {
+        overflow: hidden;
+    }
+
+    .area0 {
+        background-size: 200% 130%;
+    }
+
+    .area1 {
+        margin: 0px;
+    }
+
+    .input-panel {
+        margin: 20px 0px 5px 0px;
+    }
+    
+    .input-title {
+        color: #FFF;
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: 10px
+    }
+}

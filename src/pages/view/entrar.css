@@ -1,0 +1,71 @@
+header {
+    position: static;
+    background-color: #00000000;
+}
+.cadastrar {
+    margin: 10px;
+    color: #FFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text-button {
+    margin: 0px 10px;
+}
+
+.menu-item {
+    margin-left: 40px;
+}
+
+.input {
+    margin: 10px;
+}
+
+.area0 {
+    background-image: url('../../assets/images/bgentrar.jpg');
+    height: 100vh;
+    width: 100vw;
+}
+
+.area1 {
+    margin: 50px;
+}
+
+@media (max-width: 1000px) { 
+
+    body {
+        overflow: hidden;
+    }
+
+    .area0 {
+        background-size: 200% 130%;
+    }
+
+    .area1 {
+        margin: 40px;
+    }
+    
+    .cadastrar {
+        flex-direction: column;
+    }
+
+    .input-title-2 {
+        color: #FFF;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+    
+    .input-title-3 {
+        color: #FFF;
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: bold;
+    }
+}

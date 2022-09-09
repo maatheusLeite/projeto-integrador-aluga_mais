@@ -1,0 +1,101 @@
+.bg {
+    background-image: url('../../assets/images/bgentrar.jpg');
+}
+
+.nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item {
+    margin-left: 40px;
+}
+
+.input {
+    margin: 10px;
+}
+
+.input-panel {
+    margin-top: 15px;
+}
+
+.input-radio {
+    margin: 10px;
+    border: 1px solid #ccc;
+    height: 17px;
+    width: 17px;
+}
+
+.area1 {
+    margin-top: 20px;
+}
+
+.type {
+    margin: 15px 0px 0px 0px;
+    color: #FFF;
+    font-size: 1.3em;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFF;
+    margin: 2px;
+}
+
+.button-editar {
+    width: 100px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-salvar {
+    width: 100px;
+    height: 45px;
+}
+
+.file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #FFF;
+    margin: 10px;
+}
+
+#nome,
+#rua {
+    width: 370px;
+}
+
+#numero {
+    width: 80px;
+}
+
+#estado {
+    width: 100px;
+}
+
+#cidade {
+    width: 250px;
+}
+
+#bairro {
+    width: 270px;
+}
+
+#valor {
+    width: 200px;
+    margin-left: 20px;
+}
+
+#imagem {
+    color: #FFF;
+    margin: 10px;
+    width: 370px;
+}
