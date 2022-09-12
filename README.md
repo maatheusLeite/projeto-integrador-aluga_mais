@@ -32,15 +32,16 @@ O projeto foi desenvolvido com o uso do servidor web <b> XAMPP Server </b>, que 
 Em caso de problemas de autorização ao salvar imagens, é necessario conceder permissão de escrita para a pasta posts.
 
 <h4> Instruções de uso </h4>
-Para que o tudo funcione da maneira correta, é necessário utilizar os scripts SQL para criação da base de dados que podem ser encontrados na pasta DOCS no seguinte caminho do reposit <b> projeto-integrador/src/docs/ </b>. Nesta mesma pasta, também é está disponivel o diagrama entidade relacionamento, utilizado para a modelagem do banco.
+Para que o tudo funcione da maneira correta, é necessário utilizar os scripts SQL para criação da base de dados que podem ser encontrados na pasta DOCS no seguinte caminho do reposit <b> projeto-integrador/src/docs/ </b>. Nesta mesma pasta, também está disponivel o diagrama entidade relacionamento, utilizado para a modelagem do banco.
+Após criar a base de dados, é necessário mover a pasta <b> SRC </b> (que é a pasta base do projéto) para a pasta base do apache web server utilizado, no caso do XAMPP Server, é necessário mover a pasta SRC para dentro da pasta <b> htdocs </b>, e por meio de seu navegador, ir até o caminho <i><b> src/pages/controller/index.php </b></i>.
 </p>
 
-<h2> Funcionálidades </h2>
+<h2> Funcionalidades </h2>
 <p> 
 <ul>
 <li> Login único para cada usuário: Cada usuário é unico, sendo necessário informar um email diferente dos já cadastrados no banco para cadastrar um novo usuário. </li>
 <li> Senhas criptografadas na base de dados: As senhas ficam armazenadas na base de dados em forma de HASH, o que oculta seu conteúdo em caso de consultas no banco. </li>
-<li> Localidades: Cada usuário pode postar inumeras localidades, cada uma com inúmeras imagens vincúladas, também podendo excluir cada localidade caso deseje. </li>
+<li> Localidades: Cada usuário pode postar inúmeras localidades, cada uma com inúmeras imagens vinculadas, também podendo excluir cada localidade caso deseje. </li>
 <li> Diversas imagens: Cada localidade salva pode conter diversas imagens. Cada imagem fica salva no servidor na pasta <b> posts </b>, sendo vinculada às localidade por meio de sua URL, que fica salva em uma tabela da base de dados. </li>
 
 
