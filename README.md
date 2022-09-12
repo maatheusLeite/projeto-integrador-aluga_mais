@@ -1,4 +1,4 @@
-# Projeto-integrador - Aluga+ 
+# Projeto Integrador - Aluga+ 
 
 <h2> Integrantes do grupo </h2>
 
@@ -29,7 +29,7 @@ projeto, assim como a linha de raciocinio utilizada para realizar os problemas e
 <p> 
 <h4> Recursos Utilizados </h4>
 O projeto foi desenvolvido com o uso do servidor web <b> XAMPP Server </b>, que pode ser instalado tanto em maquinas windows ou linux. O XAMPP Server possui o Web Server Apache, utilizando a versão da linguagem PHP 8.1 e o SGBD MySQL para o armazenamento de dados.
-Em caso de problemas de autorização ao salvar imagens,é necessario conceder permissão de escrita para a pasta posts.
+Em caso de problemas de autorização ao salvar imagens, é necessario conceder permissão de escrita para a pasta posts.
 
 <h4> Instruções de uso </h4>
 Para que o tudo funcione da maneira correta, é necessário utilizar os scripts SQL para criação da base de dados que podem ser encontrados na pasta DOCS no seguinte caminho do reposit <b> projeto-integrador/src/docs/ </b>. Nesta mesma pasta, também é está disponivel o diagrama entidade relacionamento, utilizado para a modelagem do banco.
