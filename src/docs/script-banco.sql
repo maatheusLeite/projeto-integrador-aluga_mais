@@ -11,7 +11,7 @@
  *  
  *  Tipo de conexão: PHP PDO;
  *
- *  Tabelas do banco: USUARIOS, LOCACOES, ENDERECOS;
+ *  Tabelas do banco: USUARIO, LOCALIDADE, ENDERECO, IMAGEM, TELEFONE;
  *       
  */
 
@@ -230,16 +230,11 @@ VALUES('Avenida das traças', 'João Barroso', 'São Paulo', 'SP', '182', 9); /*
 
 
 
-
-
-
-
-
+-- ALGUNS SELECTS UTEIS
 
 
 SELECT * FROM USUARIO
 INNER JOIN TELEFONE ON IDUSUARIO = ID_USUARIO;
-
 
 
 SELECT L.NOME, L.TIPO, L.VALOR, I.IDIMAGEM, I.URL,
@@ -252,10 +247,6 @@ INNER JOIN IMAGEM I
     ON I.ID_LOCALIDADE = L.IDLOCALIDADE
 LIMIT 5;
 
-
-
-
--- Trazer tudo
 
 SELECT U.NOME, U.EMAIL, U.SENHA, T.DDD, T.NUMERO,
     L.IDLOCALIDADE, L.NOME, L.TIPO, L.VALOR, L.PAGAMENTO,
