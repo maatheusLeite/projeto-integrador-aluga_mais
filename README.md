@@ -32,8 +32,8 @@ O projeto foi desenvolvido com o uso do servidor web <b> XAMPP Server </b>, que 
 Em caso de problemas de autorização ao salvar imagens, é necessario conceder permissão de escrita para a pasta posts.
 
 <h4> Instruções de uso </h4>
-Para que o tudo funcione da maneira correta, é necessário utilizar os scripts SQL para criação da base de dados que podem ser encontrados na pasta DOCS no seguinte caminho do reposit <b> projeto-integrador/src/docs/ </b>. Nesta mesma pasta, também está disponivel o diagrama entidade relacionamento, utilizado para a modelagem do banco.
-Após criar a base de dados, é necessário mover a pasta <b> SRC </b> (que é a pasta base do projeto) para a pasta base do apache web server utilizado, no caso do XAMPP Server, é necessário mover a pasta SRC para dentro da pasta <b> htdocs </b>, e por meio de seu navegador, ir até o caminho <i><b> src/pages/controller/index.php </b></i>.
+Para que o tudo funcione da maneira correta, é necessário utilizar os scripts SQL para criação da base de dados que podem ser encontrados na pasta DOCS no seguinte caminho do repositório  <i><b> projeto-integrador/src/docs/ </b></i>. Nesta mesma pasta, também está disponivel o diagrama entidade relacionamento, utilizado para a modelagem do banco.
+Após criar a base de dados, é necessário mover a pasta <b> SRC </b> (que é a pasta base do projeto) para a pasta base do apache web server utilizado, no caso do XAMPP Server, é necessário mover a pasta SRC para dentro da pasta <b> htdocs </b>, e por meio de seu navegador, ir até o caminho <i><b> localhost/src/pages/controller/index.php </b></i>.
 </p>
 
 <h2> Funcionalidades </h2>
