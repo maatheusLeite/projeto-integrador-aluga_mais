@@ -1,16 +1,5 @@
 # Projeto Integrador - Aluga+ 
 
-<h2> Integrantes do grupo </h2>
-
-Alvaro Basto Siqueira de Lima <br>
-Arturo Rafael Ferraris <br>
-Daniel Angelo de Freitas <br>
-Felipe de Sousa Techera <br>
-Fellipe da Silva Lima <br>
-Frederico Valle dos Anjos <br>
-Josiane Rocha de Oliveira <br>
-Matheus da Silva Leite
-
 ## Descrição do Projeto
 <p>
 Este projeto apresenta um sistema de login e cadastro de usuários únicos, separados por email e senha, onde cada usuário pode visualizar localidades publicadas por outros usuários, publicar suas proprias localidades e exclui-las.
